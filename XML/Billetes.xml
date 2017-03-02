@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bi:billetes xmlns:bi="http://www.billetes.es"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.billetes.es billetes.xsd">
+	
+	<bi:billete>
+		<clase>Turista</clase>
+		<asiento>22A</asiento>
+		<precio>120</precio>
+		<iva>10</iva>
+		<viajero>12345678A</viajero>
+	</bi:billete>
+
+	<bi:cliente dni="12345678A">
+		<nombre>Pedro López</nombre>
+		<telefono>963852741</telefono>
+		<email>pedro@gmail.com</email>
+		<direccion>c/ economia, 25</direccion>
+		<ciudad>Madrid</ciudad>
+	</bi:cliente>
+	<bi:cliente dni="12345678B">
+		<nombre>Gonzalo García</nombre>
+		<telefono>987456321</telefono>
+		<email>gonzalo@gmail.com</email>
+		<direccion>c/ rupestre,4</direccion>
+		<ciudad>Albacete</ciudad>
+	</bi:cliente>
+	
+</bi:billetes>

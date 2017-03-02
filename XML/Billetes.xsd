@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.billetes.es" targetNamespace="http://www.billetes.es">
+	<xs:element name="billetes"/>
+	<xs:element name="billete">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="clase" type="claseBillete"/>
+				<xs:element name="asiento" type="xs:string"/>
+				<xs:element name="precio" type="xs:decimal"/>
+				<xs:element name="iva" type="xs:decimal"/>
+				<xs:element name="viajero" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="cliente">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"/>
+				<xs:element name="telefono" type="xs:string"/>
+				<xs:element name="email" type="xs:string"/>
+				<xs:element name="direccion" type="xs:string"/>
+				<xs:element name="ciudad" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="dni" use="required" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:simpleType name="claseBillete">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Turista"/>
+			<xs:enumeration value="Bussiness"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
